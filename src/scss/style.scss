@@ -9,7 +9,13 @@
 @import 'global';
 
 // * components
-@import './components/header';
+
+// * header
+@import './components/header/header';
+@import './components/header/header-catalog';
+@import './components/header/header-menu';
+@import './components/header/header-burger';
+
 @import './components/footer';
 
 // * templates

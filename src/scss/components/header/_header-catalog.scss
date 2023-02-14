@@ -1,0 +1,49 @@
+.header-catalog {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	margin-right: 20px;
+
+	&__item {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: 16px;
+			padding-right: 16px;
+
+			@include mq(xl) {
+				margin-right: 0;
+				margin-bottom: 16px;
+				padding-right: 0;
+			}
+
+			&::before {
+				@include line;
+				width: 2px;
+				height: 100%;
+				background-color: $dark-700;
+				transform: rotate(16deg);
+
+				@include mq(xl) {
+					display: none;
+				}
+			}
+		}
+
+		@include mq(xl) {
+			width: 100%;
+		}
+	}
+
+	&__link {
+		@include mq(xl) {
+			display: block;
+			text-align: right;
+		}
+	}
+
+	@include mq(xl) {
+		display: none;
+		margin-right: 0;
+	}
+}

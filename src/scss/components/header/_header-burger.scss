@@ -1,0 +1,32 @@
+.burger-button {
+	@include burger;
+	z-index: 10;
+	display: none;
+
+	@include mq(xl) {
+		display: flex;
+	}
+}
+
+.burger-menu {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 5;
+	display: none;
+	width: 100%;
+	max-width: 360px;
+	height: 100%;
+	padding: 80px 20px 20px;
+	background-color: $dark-800;
+
+	&--active {
+		display: block;
+
+		.header-menu,
+		.header-catalog {
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}

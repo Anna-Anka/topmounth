@@ -33,9 +33,9 @@
 // import './functions/fix-fullheight';
 
 // * Реализация бургер-меню
-//import { burger } from './templates/burger';
+import { burger } from './templates/burger';
 
-//burger();
+burger();
 
 // * Реализация остановки скролла (не забудьте вызвать функцию)
 // import { disableScroll } from './templates/disable-scroll';
