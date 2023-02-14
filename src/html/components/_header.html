@@ -1,3 +1,85 @@
 <header class="header">
-    
+    <div class="container">
+        <nav class="header__navigation">
+            <div class="header__top">
+                <div class="header__menu">
+                    <a class="header__logo logo" href="#">
+                        <picture>
+                           <source srcset="img/logo.avif" type="image/avif">
+                           <source srcset="img/logo.webp" type="image/webp">
+                           <img class="logo__img" src="img/logo.png" alt="Логотип" width="205" height="25" loading="lazy">
+                        </picture>
+                    </a>
+                    <ul class="header__items">
+                        <li class="header__item">
+                            <a class="header__link" href="#">
+                                О нас
+                            </a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" href="#">
+                                Контакты
+                            </a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" href="#">
+                                Диллеры
+                            </a>
+                        </li>
+                        <li class="header__item">
+                            <a class="header__link" href="#">
+                                Бренды
+                            </a>
+                        </li>
+                    </ul>
+                    <a class="header__download" href="#" download>
+                        Прайс-лист
+                    </a>
+                </div>
+                <div class="header__contacts">
+                    <a class="header__contact header__contact--watsapp" href="#">
+                        WhatsApp
+                    </a>
+                    <a class="header__contact header__contact--phone" href="tel:+88002007093">
+                        8 (800) 200-70-93
+                    </a>
+                </div>
+            </div>
+            <div class="header__bottom">
+                <ul class="header-catalog">
+                    <li class="header-catalog__item">
+                        <a class="header-catalog__link" href="#">
+                            Кронштейны
+                        </a>
+                    </li>
+                    <li class="header-catalog__item">
+                        <a class="header-catalog__link" href="#">
+                            Сопутствующие товары
+                        </a>
+                    </li>
+                    <li class="header-catalog__item">
+                        <a class="header-catalog__link" href="#">
+                            Камеры
+                        </a>
+                    </li>
+                    <li class="header-catalog__item">
+                        <a class="header-catalog__link" href="#">
+                            Оптические приборы
+                        </a>
+                    </li>
+                </ul>
+                <div class="header__user">
+                    <form class="header__search form-search" action="#">
+                        <div class="form-search__content">
+                            <label class="sr-only" for="search">Поиск</label>
+                            <input class="form-search__field" name="search" type="search" placeholder="Поиск" id="search" required>
+                        </div>
+                    </form>
+                    <button class="header__account" type="button">
+                        Войти
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </div>
 </header>
