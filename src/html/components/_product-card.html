@@ -1,0 +1,39 @@
+<article class="product-card">
+    <div class="product-card__top">
+
+        @if(context.isLabels === 'true') {
+            <div class="product-card__labels">
+                @if(context.isNew === 'true') {
+                    <span class="product-card__label product-card__label--new">Новинка</span>
+                }
+
+                @if(context.isDiscount === 'true') {
+                    <span class="product-card__label product-card__label--discount">-50%</span>
+                }
+            </div>
+        }
+
+        <a class="product-card__image" href="#">
+            <picture class="product-card__picture">
+                <source srcset="img/product/1.avif" type="image/avif">
+                <source srcset="img/product/1.webp" type="image/webp">
+                <img class="product-card__img" src="img/product/1.png" alt="Товар" width="310" height="280" loading="lazy">
+            </picture>
+        </a>
+    </div>
+    <div class="product-card__content">
+        <div class="product-card__price">
+            <span class="product-card__current">@current ₽</span>
+
+            @if(context.isOld === 'true') {
+                <span class="product-card__old">@old</span>
+            }
+            
+        </div>
+        <h3 class="product-card__title">
+            <a class="product-card__link" href="#">
+                @title
+            </a>
+        </h3>
+    </div>
+</article>

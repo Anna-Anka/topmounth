@@ -16,6 +16,9 @@
 @import './components/header/header-menu';
 @import './components/header/header-burger';
 
+@import './components/product-card';
+@import './components/form-search';
+
 @import './components/footer';
 
 // * templates
@@ -27,3 +30,4 @@
 // * home-page
 @import './home-page/top-slider';
 @import './home-page/brands';
+@import './home-page/new-products';

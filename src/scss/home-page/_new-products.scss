@@ -1,0 +1,37 @@
+.new-products {
+	background-color: $dark-800;
+
+	&__title {
+		color: $dark-800;
+
+		&::before {
+			border-top-color: $white;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__swiper {
+		position: static;
+	}
+
+	&__buttons {
+		position: absolute;
+		@include adaptiv-value('top', -90, -80, 1);
+		right: 0;
+		display: flex;
+
+		@include mq(sm) {
+			top: unset;
+			right: 50%;
+			bottom: -70px;
+			transform: translateX(50%);
+		}
+	}
+
+	&__item {
+		height: auto;
+	}
+}

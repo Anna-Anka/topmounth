@@ -1,2 +1,5 @@
 import { topSlider } from "./swipers/_top-slider";
-topSlider()
+topSlider();
+
+import { newSlider } from "./swipers/_new-products";
+newSlider();
