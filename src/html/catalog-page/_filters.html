@@ -1,0 +1,100 @@
+<div class="catalog-navigation">
+    <h2 class="sr-only">Фильтры</h2>
+    <div class="category catalog-navigation__item">
+        <h3 class="category__title">Категории</h3>
+        <ul class="category__items">
+            <li class="category__item">
+                <a class="category__link" href="#">
+                    Кронштейны
+                </a>
+            </li>
+            <li class="category__item">
+                <a class="category__link category__link--current" href="#">
+                    Сопутствующие товары
+                </a>
+            </li>
+            <li class="category__item">
+                <a class="category__link" href="#">
+                    Камеры
+                </a>
+            </li>
+            <li class="category__item">
+                <a class="category__link" href="#">
+                    Оптические приборы
+                </a>
+            </li>
+        </ul>
+    </div>
+    <form class="filters catalog-navigation__item" action="#">
+
+        <fieldset class="filters__item filter">
+            <div class="filter__top">
+                <legend class="filter__title">Размер</legend>
+                <button class="filter__toggle" type="button" aria-hidden="true" aria-label="Скрыть"></button>
+            </div>
+            <div class="filter__box">
+                <ul class="filter__items">
+                    <li class="filter__item">
+                        <label class="filter__content">
+                            <input class="filter__hidden" type="radio" name="size" value="large">
+                            <span class="filter__visible filter__visible--radio" aria-hidden="true"></span>
+                            Большой
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label class="filter__content">
+                            <input class="filter__hidden" type="radio" name="size" value="middle">
+                            <span class="filter__visible filter__visible--radio" aria-hidden="true"></span>
+                            Средний
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label class="filter__content">
+                            <input class="filter__hidden" type="radio" name="size" value="small">
+                            <span class="filter__visible filter__visible--radio" aria-hidden="true"></span>
+                            Маленький
+                        </label>
+                    </li>
+                </ul>
+            </div>
+        </fieldset>
+
+        <fieldset class="filters__item filter">
+            <div class="filter__top">
+                <legend class="filter__title">Бренды</legend>
+                <button class="filter__toggle" type="button" aria-hidden="true" aria-label="Скрыть"></button>
+            </div>
+            <div class="filter__box">
+                <ul class="filter__items">
+                    <li class="filter__item">
+                        <label class="filter__content">
+                            <input class="filter__hidden" type="checkbox" name="brands" value="large">
+                            <span class="filter__visible filter__visible--checkbox" aria-hidden="true"></span>
+                            Большой
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label class="filter__content">
+                            <input class="filter__hidden" type="checkbox" name="brands" value="middle">
+                            <span class="filter__visible filter__visible--checkbox" aria-hidden="true"></span>
+                            Средний
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label class="filter__content">
+                            <input class="filter__hidden" type="checkbox" name="brands" value="small">
+                            <span class="filter__visible filter__visible--checkbox" aria-hidden="true"></span>
+                            Маленький
+                        </label>
+                    </li>
+                </ul>
+                <button class="filter__more more" type="button">Показать еще</button>
+            </div>
+        </fieldset>
+
+        <div class="filters__buttons">
+            <button class="filters__button button" type="button">Применить</button>
+            <button class="filters__button button button--border" type="button">Сбросить</button>
+        </div>
+    </form>
+</div>

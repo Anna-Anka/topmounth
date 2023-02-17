@@ -4,7 +4,6 @@ Swiper.use([Navigation]);
 Swiper.use([Pagination]);
 
 export const topSlider = () => {
-    console.log('a')
     if (document.querySelector('.top-slider__swiper')) {
         return new Swiper('.top-slider__swiper', {
             centeredSlides: true,

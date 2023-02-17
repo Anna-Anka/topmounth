@@ -1,5 +1,4 @@
 .header {
-	margin-bottom: 12px;
 	@include adaptiv-value('padding-top', 20, 14, 1);
 	@include adaptiv-value('padding-bottom', 20, 14, 1);
 	color: $white;

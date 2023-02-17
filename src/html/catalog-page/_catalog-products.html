@@ -1,0 +1,97 @@
+<div class="catalog__products">
+    <div class="overlay"></div>
+    <div class="catalog__top">
+        <a class="catalog__download button button--border" href="#" download="#">Таблица подбора</a>
+        <button class="catalog__filters" type="button">
+            <span class="sr-only">открыть фильтры</span>
+        </button>
+    </div>
+    <ul class="catalog__items">
+        <li class="catalog__item">
+            @include('./../components/_product-card.html', {
+            'isLabels' : 'true',
+            'isNew' : 'true',
+            'isDiscount' : 'true',
+            'title' : 'Raven Euro Carbonschaft - MT30 - für System Tikka T3x',
+            'current' : '125 000',
+            'isOld' : 'true',
+            'old' : '150 000'
+            })
+        </li>
+        <li class="catalog__item">
+            @include('./../components/_product-card.html', {
+            'isLabels' : 'true',
+            'isNew' : 'true',
+            'isDiscount' : 'true',
+            'title' : 'Raven Euro Carbonschaft - MT30 - für System Tikka T3x',
+            'current' : '125 000',
+            'isOld' : 'true',
+            'old' : '150 000'
+            })
+        </li>
+        <li class="catalog__item">
+            @include('./../components/_product-card.html', {
+            'isLabels' : 'true',
+            'isDiscount' : 'true',
+            'title' : 'Raven Euro Carbonschaft - MT30 - für System Tikka T3x',
+            'current' : '125 000',
+            'isOld' : 'true',
+            'old' : '150 000'
+            })
+        </li>
+        <li class="catalog__item">
+            @include('./../components/_product-card.html', {
+            'isLabels' : 'true',
+            'isNew' : 'true',
+            'title' : 'Raven Euro Carbonschaft - MT30 - für System Tikka T3x',
+            'current' : '125 000',
+            'isOld' : 'true',
+            'old' : '150 000'
+            })
+        </li>
+        <li class="catalog__item">
+            @include('./../components/_product-card.html', {
+            'title' : 'Raven Euro Carbonschaft - MT30 - für System Tikka T3x',
+            'current' : '125 000',
+            'isOld' : 'true',
+            'old' : '150 000'
+            })
+        </li>
+        <li class="catalog__item">
+            @include('./../components/_product-card.html', {
+            'isLabels' : 'true',
+            'isNew' : 'true',
+            'isDiscount' : 'true',
+            'title' : 'Raven Euro Carbonschaft',
+            'current' : '125 000',
+            })
+        </li>
+    </ul>
+    <ul class="pagination">
+        <li class="pagination__item">
+            <a class="pagination__link pagination__link--prevent">
+                <span class="sr-only">Предыдущая страница</span>
+            </a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link pagination__link--current" href="#">1</a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link" href="#">2</a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link" href="#">3</a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link">...</a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link" href="#">15</a>
+        </li>
+        <li class="pagination__item">
+            <a class="pagination__link pagination__link--next" href="#">
+                <span class="sr-only">Следующая страница</span>
+            </a>
+        </li>
+    </ul>
+</div>

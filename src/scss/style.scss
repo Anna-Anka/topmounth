@@ -16,8 +16,10 @@
 @import './components/header/header-menu';
 @import './components/header/header-burger';
 
-@import './components/product-card';
 @import './components/form-search';
+@import './components/breadcrumbs';
+@import './components/product-card';
+@import './components/pagination';
 
 @import './components/footer';
 
@@ -33,3 +35,7 @@
 @import './home-page/new-products';
 @import './home-page/about';
 @import './home-page/advantages';
+
+// * catalog-page
+@import './catalog-page/catalog';
+@import './catalog-page/filters';
