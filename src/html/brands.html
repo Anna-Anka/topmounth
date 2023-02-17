@@ -1,0 +1,21 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Topmount — интернет магазин | Главная страница' }
+)
+<!--  -->
+@include('./components/_header.html')
+
+<main class="main">
+    <div class="brands-page">
+        @include('./components/_breadcrumbs.html', {
+        'count' : '2',
+        '1' : 'Главная',
+        'current' : 'Бренды'
+        })
+
+        @include('./brands-page/_brands-page.html')
+    </div>
+</main>
+
+@include('./components/_footer.html')
+<!--  -->
+@include('./components/links/_bottom.html')

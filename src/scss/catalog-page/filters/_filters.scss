@@ -1,0 +1,25 @@
+.filters {
+	padding: 20px 0;
+
+	&__item {
+		position: relative;
+		margin-bottom: 16px;
+		padding: 0 16px 16px;
+
+		&::before {
+			@include line;
+			background-color: $grey-400;
+		}
+	}
+
+	&__buttons {
+		@include flex-center-sb;
+		padding: 0 16px;
+	}
+
+	&__button {
+		&:not(:last-child) {
+			margin-right: 12px;
+		}
+	}
+}

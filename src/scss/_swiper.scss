@@ -1,0 +1,45 @@
+.swiper-slide {
+	box-sizing: border-box;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	position: relative;
+	top: unset;
+	right: unset;
+	left: unset;
+	width: 54px;
+	height: 48px;
+	margin-top: 0;
+	background-color: $orange-500;
+	transform: skew(-12deg);
+	transition: background-color 0.4s;
+
+	&::after {
+		top: 50%;
+		right: 50%;
+		width: 28px;
+		height: 28px;
+		font-size: 0;
+		background-image: url('../img/icons/swiper-arrow.svg');
+		transform: skew(12deg);
+	}
+}
+
+.swiper-button-prev {
+	margin-right: 12px;
+	&::after {
+		transform: rotate(180deg);
+	}
+}
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled {
+	background-color: $white;
+	opacity: 1;
+
+	&::after {
+		filter: invert(55%) sepia(59%) saturate(2929%) hue-rotate(357deg)
+			brightness(100%) contrast(85%);
+	}
+}
