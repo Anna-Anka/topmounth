@@ -15,6 +15,11 @@
 
         @include('./product-page/_product.html')
     </div>
+
+    @include('./components/_preview-products.html', {
+        'title' : 'Похожие'
+    })
+
 </main>
 
 @include('./components/_footer.html')

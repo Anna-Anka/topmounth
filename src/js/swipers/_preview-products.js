@@ -1,12 +1,12 @@
 import './../_libs'
 
-export const newSlider = () => {
-    if (document.querySelector('.new-products__swiper')) {
-        return new Swiper('.new-products__swiper', {
+export const previewProductsSlider = () => {
+    if (document.querySelector('.preview-products__swiper')) {
+        return new Swiper('.preview-products__swiper', {
             spaceBetween: 20,
             navigation: {
-                nextEl: '.new-products__button--next',
-                prevEl: '.new-products__button--prev',
+                nextEl: '.preview-products__button--next',
+                prevEl: '.preview-products__button--prev',
             },
 
             breakpoints: {

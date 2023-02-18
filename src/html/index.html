@@ -7,10 +7,17 @@
 <main class="main">
     <h1 class="sr-only">Topmount — интернет магазин</h1>
     @include('./home-page/_top-slider.html')
+
     @include('./home-page/_brands.html')
-    @include('./home-page/_new-products.html')
+
+    @include('./components/_preview-products.html', {
+        'title' : 'Новинки'
+    })
+
     @include('./home-page/_posts-vk.html')
+
     @include('./home-page/_about.html')
+
     @include('./home-page/_advantages.html')
 </main>
 
