@@ -3,3 +3,6 @@ topSlider();
 
 import { newSlider } from "./swipers/_new-products";
 newSlider();
+
+import { productSlider } from "./swipers/_product-slider";
+productSlider();

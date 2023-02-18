@@ -48,14 +48,10 @@
 	&__bg {
 		position: relative;
 		display: flex;
-		align-self: start;
+		align-self: center;
 		width: 100%;
 		max-width: 782px;
 		padding-bottom: 33%;
-
-		@include mq(xl) {
-			align-self: center;
-		}
 
 		@include mq(lg) {
 			max-width: 100%;

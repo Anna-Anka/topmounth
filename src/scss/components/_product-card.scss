@@ -19,28 +19,8 @@
 	}
 
 	&__old,
-	&__title,
-	&__label {
+	&__title {
 		font-size: 14px;
-	}
-
-	&__label {
-		max-width: max-content;
-		padding: 4px 8px;
-		color: $white;
-		font-weight: $fw-500;
-
-		&:not(:last-child) {
-			margin-bottom: 8px;
-		}
-
-		&--new {
-			background-color: $green-400;
-		}
-
-		&--discount {
-			background-color: $red-500;
-		}
 	}
 
 	&__image,
@@ -61,21 +41,9 @@
 		@include adaptiv-value('padding-right', 22, 12, 1);
 	}
 
-	&__price {
-		margin-bottom: 8px;
-	}
-
-	&__current {
-		margin-right: 12px;
-		font-weight: $fw-700;
-		font-size: 18px;
-		font-family: $futura;
-	}
-
-	&__old {
-		color: $dark-400;
-		text-decoration: line-through;
-	}
+    &__price {
+        margin-bottom: 8px;
+    }
 
 	&__title {
 		font-weight: $fw-500;

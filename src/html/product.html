@@ -1,0 +1,22 @@
+@include('./components/links/_head.html',
+{ 'title' : 'Topmount — интернет магазин | Страница товара' }
+)
+<!--  -->
+@include('./components/_header.html')
+
+<main class="main">
+    <div class="product-page">
+        @include('./components/_breadcrumbs.html', {
+        'count' : '3',
+        '1' : 'Главная',
+        '2' : 'Каталог',
+        'current' : 'TOPMOUNT — чехол для охотничьего оружия с установленным прицелом и ДТК (арт. Ч-001)'
+        })
+
+        @include('./product-page/_product.html')
+    </div>
+</main>
+
+@include('./components/_footer.html')
+<!--  -->
+@include('./components/links/_bottom.html')

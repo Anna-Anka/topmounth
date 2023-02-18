@@ -1,19 +1,18 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
-
-Swiper.use([Navigation]);
-Swiper.use([Pagination]);
+import './../_libs'
 
 export const topSlider = () => {
     if (document.querySelector('.top-slider__swiper')) {
         return new Swiper('.top-slider__swiper', {
-            centeredSlides: true,
+            // centeredSlides: true,
             loop: true, 
-            slidesPerView: 1.06,
 
             breakpoints: {
 
                 1200: {
                     spaceBetween: -45,
+                    initialSlide: 1,
+                    slidesPerView: 1.50,
+
                 },
 
                 992: {
@@ -22,6 +21,7 @@ export const topSlider = () => {
 
                 767: {
                     slidesPerView: 1.06,
+                    spaceBetween: -30,
                 },
 
                 320: {

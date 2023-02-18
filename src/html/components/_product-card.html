@@ -4,11 +4,11 @@
         @if(context.isLabels === 'true') {
             <div class="product-card__labels">
                 @if(context.isNew === 'true') {
-                    <span class="product-card__label product-card__label--new">Новинка</span>
+                    <span class="product-label product-label--new">Новинка</span>
                 }
 
                 @if(context.isDiscount === 'true') {
-                    <span class="product-card__label product-card__label--discount">-50%</span>
+                    <span class="product-label product-label--discount">-50%</span>
                 }
             </div>
         }
@@ -22,11 +22,11 @@
         </a>
     </div>
     <div class="product-card__content">
-        <div class="product-card__price">
-            <span class="product-card__current">@current ₽</span>
+        <div class="product-card__price product-price">
+            <span class="product-price__current">@current ₽</span>
 
             @if(context.isOld === 'true') {
-                <span class="product-card__old">@old</span>
+                <span class="product-price__old">@old</span>
             }
             
         </div>

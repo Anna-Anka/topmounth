@@ -1,7 +1,4 @@
-import Swiper, { Navigation, Pagination } from 'swiper';
-
-Swiper.use([Navigation]);
-Swiper.use([Pagination]);
+import './../_libs'
 
 export const newSlider = () => {
     if (document.querySelector('.new-products__swiper')) {

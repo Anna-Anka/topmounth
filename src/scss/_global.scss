@@ -157,4 +157,38 @@ body {
 	}
 }
 
+.product-label {
+	max-width: max-content;
+	padding: 4px 8px;
+	color: $white;
+	font-weight: $fw-500;
+	font-size: 14px;
+
+	&:not(:last-child) {
+		margin-bottom: 8px;
+	}
+
+	&--new {
+		background-color: $green-400;
+	}
+
+	&--discount {
+		background-color: $red-500;
+	}
+}
+
+.product-price {
+	&__current {
+		margin-right: 12px;
+		font-weight: $fw-700;
+		font-size: 18px;
+		font-family: $futura;
+	}
+
+	&__old {
+		color: $dark-400;
+		text-decoration: line-through;
+	}
+}
+
 
