@@ -1,0 +1,33 @@
+.video {
+    @include adaptiv-value('padding-bottom', 60, 40, 1);
+
+    &__container {
+        @include mq(md) {
+            padding: 0;
+        }
+    }
+
+	&__link {
+		@include bg-cover;
+		@include flex-all-center;
+		height: 42vh;
+	}
+
+	&__play {
+		position: relative;
+		width: 54px;
+		height: 48px;
+		background-color: $orange-500;
+		transform: skew(-12deg);
+
+		&::before {
+			@include icon;
+			top: 50%;
+			left: 50%;
+			width: 20px;
+			height: 20px;
+			background-image: url('../img/icons/play.svg');
+			transform: translate(-50%, -50%);
+		}
+	}
+}
