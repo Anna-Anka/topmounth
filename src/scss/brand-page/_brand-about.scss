@@ -43,6 +43,8 @@
 	}
 
     &__text {
+        color: $dark-600;
+        
         p {
             &:not(:last-child) {
                @include adaptiv-value('margin-bottom', 20, 12, 1);     

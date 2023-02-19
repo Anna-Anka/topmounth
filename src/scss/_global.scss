@@ -80,6 +80,7 @@ body {
 	height: 100%;
 	background-color: rgba($dark-800, 0.5);
 	opacity: 0;
+    overflow: hidden;
 
 	&--active {
 		z-index: 4;

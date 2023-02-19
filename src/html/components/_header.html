@@ -47,9 +47,8 @@
                         8 (800) 200-70-93
                     </a>
                 </div>
-                <button class="burger-button" type="button" aria-expanded="false" data-burger>
+                <button class="burger-button" type="button" aria-expanded="false" aria-controls="burger-menu" aria-label="открыть меню" data-burger>
                    <span class="burger-button__line"></span>
-                   <span class="sr-only">Меню</span>
                 </button>
             </div>
             <div class="header__bottom">
@@ -87,7 +86,7 @@
                     </button>
                 </div>
             </div>
-            <div class="burger-menu" data-menu>
+            <div class="burger-menu" id="burger-menu" data-menu>
                 <div class="header-menu">
                     <ul class="header-menu__items">
                         <li class="header-menu__item">

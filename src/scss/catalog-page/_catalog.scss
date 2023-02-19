@@ -39,6 +39,7 @@
 
 	&__filters {
 		position: relative;
+		display: none;
 		width: 44px;
 		height: 44px;
 		margin-left: auto;
@@ -54,12 +55,16 @@
 			background-image: url('../img/icons/filter.svg');
 			transform: translate(-50%, -50%);
 		}
+
+        @include mq(lg) {
+            display: flex;
+        }
 	}
 
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 		gap: 20px;
-        @include adaptiv-value('margin-bottom', 40, 28, 1);
+		@include adaptiv-value('margin-bottom', 40, 28, 1);
 	}
 }

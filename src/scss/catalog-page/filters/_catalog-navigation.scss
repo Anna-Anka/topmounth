@@ -14,6 +14,7 @@
 
 	@include mq(lg) {
 		display: none;
+        margin-right: 0;
 	}
 
 	&--open {

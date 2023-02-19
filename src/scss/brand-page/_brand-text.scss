@@ -1,0 +1,27 @@
+.brand-text {
+	&:not(:last-child) {
+		@include adaptiv-value('padding-bottom', 60, 40, 1);
+	}
+
+	&:last-child {
+		@include adaptiv-value('padding-bottom', 100, 60, 1);
+        @include adaptiv-value('padding-top', 60, 40, 1);
+	}
+
+	&__content {
+		width: 100%;
+		max-width: 740px;
+		margin: 0 auto;
+		color: $dark-600;
+
+		@include mq(md) {
+			max-width: 100%;
+		}
+
+		p {
+			&:not(:last-child) {
+				@include adaptiv-value('margin-bottom', 20, 14, 1);
+			}
+		}
+	}
+}

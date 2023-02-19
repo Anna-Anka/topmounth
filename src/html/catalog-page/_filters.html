@@ -1,4 +1,4 @@
-<div class="catalog-navigation">
+<div class="catalog-navigation" id="catalog-navigation">
     <h2 class="sr-only">Фильтры</h2>
     <div class="category catalog-navigation__item">
         <h3 class="category__title">Категории</h3>
@@ -30,9 +30,9 @@
         <fieldset class="filters__item filter">
             <div class="filter__top">
                 <legend class="filter__title">Размер</legend>
-                <button class="filter__toggle" type="button" aria-hidden="true" aria-label="Скрыть"></button>
+                <button class="filter__toggle" type="button" aria-expanded="true" aria-label="Закрыть" aria-controls="filter-size"></button>
             </div>
-            <div class="filter__box">
+            <div class="filter__box" id="filter-size">
                 <ul class="filter__items">
                     <li class="filter__item">
                         <label class="filter__content">
@@ -62,9 +62,9 @@
         <fieldset class="filters__item filter">
             <div class="filter__top">
                 <legend class="filter__title">Бренды</legend>
-                <button class="filter__toggle" type="button" aria-hidden="true" aria-label="Скрыть"></button>
-            </div>
-            <div class="filter__box">
+                <button class="filter__toggle" type="button" aria-expanded="true" aria-label="Закрыть" aria-controls="filter-brands"></button>
+            </div> 
+            <div class="filter__box" id="filter-brands">
                 <ul class="filter__items">
                     <li class="filter__item">
                         <label class="filter__content">
