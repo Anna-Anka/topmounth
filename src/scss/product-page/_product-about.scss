@@ -40,14 +40,14 @@
 	&__thumb {
 		width: 100%;
 		height: 97px;
+		border: 1px solid transparent;
 		cursor: pointer;
-        border: 1px solid transparent;
-        transition: border-color 0.4s;
+		transition: border-color 0.4s;
 	}
 
-    .swiper-slide-thumb-active {
-        border-color: $orange-500;
-    }
+	.swiper-slide-thumb-active {
+		border-color: $orange-500;
+	}
 
 	&__img {
 		width: 100%;

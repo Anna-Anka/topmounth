@@ -1,0 +1,76 @@
+.brand-about {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	@include mq(xl) {
+		flex-direction: column;
+	}
+
+	&__content {
+		flex: 0 0 100%;
+		padding-top: 40px;
+
+		@include mq(xl) {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__container {
+		display: flex;
+		align-items: flex-end;
+
+		@include mq(xl) {
+			flex-direction: column-reverse;
+		}
+	}
+
+	&__inner {
+		width: 41%;
+
+		@include mq(xl) {
+			width: 100%;
+		}
+	}
+
+	&__subtitle {
+		display: block;
+		margin-bottom: 30px;
+		font-weight: $fw-700;
+		font-size: 30px;
+		font-family: $futura;
+		line-height: 1.3;
+		text-transform: uppercase;
+	}
+
+	&__bg {
+		position: relative;
+		display: flex;
+		flex: 0 0 55%;
+		align-self: flex-end;
+		width: 100%;
+		max-width: 1080px;
+		padding-bottom: 29.5%;
+		transform: translateX(-100%);
+
+		@include mq(xl) {
+			flex: unset;
+			flex-basis: 100%;
+			padding-bottom: 48.5%;
+			transform: translateX(0);
+		}
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		@include bg-conatin;
+
+		@include mq(xl) {
+			background-size: cover;
+		}
+	}
+}
