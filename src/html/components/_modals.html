@@ -1,0 +1,65 @@
+<button class="button modal-login" data-graph-path="modal-login" style="display: none;">Открыть</button>
+<button class="button modal-authorization" data-graph-path="modal-authorization" style="display: none;">Открыть 2</button>
+
+<div class="graph-modal">
+    <div class="graph-modal__container graph-modal__container--login" role="dialog" aria-modal="true" data-graph-target="modal-login">
+        <div class="graph-modal__box">
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+            <div class="graph-modal__content">
+                <span class="graph-modal__subtitle">Вход</span>
+                <form class="graph-modal__form" action="#">
+                    <div class="graph-modal__items">
+                        <div class="graph-modal__item">
+                            <label class="sr-only" for="login-email">Введите ваше логин</label>
+                            <input class="graph-modal__field" name="login-email" type="email" placeholder="Ваш логин" id="login-email" required>
+                        </div>
+                        <div class="graph-modal__item">
+                            <label class="sr-only" for="login-password">Введите ваш пароль</label>
+                            <input class="graph-modal__field" name="login-password" type="password" placeholder="Пароль" id="login-password" required>
+                        </div>
+                    </div>
+                    <p class="graph-modal__text">
+                        Нажимая кнопку «Войти», вы подтверждаете <a class="graph-modal__link" href="#">Согласие на обработку персональных данных</a>
+                    </p>
+                    <button class="graph-modal__button button" type="button">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="graph-modal__container graph-modal__container--authorization" role="dialog" aria-modal="true" data-graph-target="modal-authorization">
+        <div class="graph-modal__box">
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+            <div class="graph-modal__content">
+                <span class="graph-modal__subtitle">Вы не авторизованы</span>
+                <form class="graph-modal__form" action="#">
+                    <div class="graph-modal__text">
+                        <p>
+                            Для создания заказа или скачивания прайс-листа вы должны авторизоваться как диллер.
+                        </p>
+                        <p>
+                            Или купите товар у одного из наших диллеров.
+                        </p>
+                    </div>
+                    <div class="graph-modal__items">
+                        <div class="graph-modal__item">
+                            <label class="sr-only" for="login-email">Введите ваше логин</label>
+                            <input class="graph-modal__field" name="login-email" type="email" placeholder="Ваш логин" id="login-email" required>
+                        </div>
+                        <div class="graph-modal__item">
+                            <label class="sr-only" for="login-password">Введите ваш пароль</label>
+                            <input class="graph-modal__field" name="login-password" type="password" placeholder="Пароль" id="login-password" required>
+                        </div>
+                    </div>
+                    <p class="graph-modal__text">
+                        Нажимая кнопку «Войти», вы подтверждаете <a class="graph-modal__link" href="#">Согласие на обработку персональных данных</a>
+                    </p>
+                    <div class="graph-modal__buttons">
+                        <button class="graph-modal__button button" type="button">Войти</button>
+                        <a class="graph-modal__button button button--border" href="#">Выбрать диллера</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

@@ -7,6 +7,10 @@
 		max-width: 1300px;
 		padding-bottom: 20%;
 
+        @include mq(lg) {
+            padding-bottom: 25%;
+        }
+
 		@include mq(md) {
 			padding-bottom: 30%;
 		}
