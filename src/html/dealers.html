@@ -1,5 +1,5 @@
 @include('./components/links/_head.html',
-{ 'title' : 'Topmount — интернет магазин | Главная страница' }
+{ 'title' : 'Topmount — интернет магазин | Каталог' }
 )
 <!--  -->
 @include('./components/_header.html')
@@ -8,11 +8,11 @@
 'class' : 'breadcrumbs',
 'count' : '2',
 '1' : 'Главная',
-'current' : 'Бренды'
+'current' : 'Дилеры'
 })
 
 <main class="main">
-    @include('./brands-page/_brands-page.html')
+    @include('./dealers-page/_dealers.html')
 </main>
 
 @include('./components/_footer.html')

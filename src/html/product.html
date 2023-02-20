@@ -4,17 +4,16 @@
 <!--  -->
 @include('./components/_header.html')
 
-<main class="main">
-    <div class="product-page">
-        @include('./components/_breadcrumbs.html', {
-        'count' : '3',
-        '1' : 'Главная',
-        '2' : 'Каталог',
-        'current' : 'TOPMOUNT — чехол для охотничьего оружия с установленным прицелом и ДТК (арт. Ч-001)'
-        })
+@include('./components/_breadcrumbs.html', {
+'class' : 'breadcrumbs breadcrumbs--grey',
+'count' : '3',
+'1' : 'Главная',
+'2' : 'Каталог',
+'current' : 'TOPMOUNT — чехол для охотничьего оружия с установленным прицелом и ДТК (арт. Ч-001)'
+})
 
-        @include('./product-page/_product.html')
-    </div>
+<main class="main">
+    @include('./product-page/_product.html')
 
     @include('./components/_preview-products.html', {
         'title' : 'Похожие'

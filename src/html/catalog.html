@@ -4,15 +4,16 @@
 <!--  -->
 @include('./components/_header.html')
 
+@include('./components/_breadcrumbs.html', {
+'class' : 'breadcrumbs breadcrumbs--grey',
+'count' : '3',
+'1' : 'Главная',
+'2' : 'Каталог',
+'current' : 'Кронштейны'
+})
+
 <main class="main">
     <section class="catalog">
-        @include('./components/_breadcrumbs.html', {
-        'count' : '3',
-        '1' : 'Главная',
-        '2' : 'Каталог',
-        'current' : 'Кронштейны'
-        })
-
         <div class="container">
             <h1 class="title">Кронштейны</h1>
             

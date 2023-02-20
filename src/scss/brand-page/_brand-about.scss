@@ -8,8 +8,7 @@
 
 	&__content {
 		flex: 0 0 100%;
-		padding-top: 40px;
-
+        
 		@include mq(xl) {
 			margin-bottom: 30px;
 		}
