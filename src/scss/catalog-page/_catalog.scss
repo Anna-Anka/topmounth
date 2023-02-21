@@ -20,9 +20,13 @@
 		position: relative;
 		max-width: fit-content;
 		margin-right: 12px;
-		padding-right: 56px;
+		padding: 12px 56px 12px 24px;
 		font-weight: 400;
+		border: 1px solid $orange-500;
 		border-width: 1px;
+		@include flex-all-center;
+		transition: color 0.4s, background-color 0.4s, border-color 0.4s,
+			transform 0.4s;
 
 		&::before {
 			@include icon;
@@ -33,6 +37,20 @@
 			height: 20px;
 			background-image: url('../img/icons/download.svg');
 			transform: translateY(-50%);
+		}
+
+		&:focus {
+			background-color: $dark-800;
+		}
+
+		&:hover {
+			color: $white;
+			background-color: $dark-800;
+			border-color: transparent;
+		}
+
+		&:active {
+			transform: scale(0.9);
 		}
 	}
 
@@ -55,9 +73,9 @@
 			transform: translate(-50%, -50%);
 		}
 
-        @include mq(lg) {
-            display: flex;
-        }
+		@include mq(lg) {
+			display: flex;
+		}
 	}
 
 	&__items {

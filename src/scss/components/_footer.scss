@@ -125,6 +125,12 @@
 
 	&__link {
 		color: $grey-500;
+        @include link;
+        transition: color 0.4s,box-shadow 0.4s, opacity 0.4s;
+
+        &:active {
+            opacity: 0.7;
+        }
 	}
 
 	&__bottom {
@@ -188,5 +194,18 @@
 		display: block;
 		width: 28px;
 		height: 28px;
+        transition: box-shadow 0.4s, opacity 0.4s, transform 0.4s;
+
+        &:focus {
+            box-shadow: 0 0 0 1px $orange-500;
+        }
+
+        &:hover {
+            transform: scale(0.9);
+        }
+
+        &:active {
+            opacity: 0.7;
+        }
 	}
 }

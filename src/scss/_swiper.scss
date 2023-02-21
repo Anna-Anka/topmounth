@@ -8,12 +8,14 @@
 	top: unset;
 	right: unset;
 	left: unset;
+	z-index: 4;
 	width: 54px;
 	height: 48px;
 	margin-top: 0;
 	background-color: $orange-500;
+	border: 2px solid transparent;
 	transform: skew(-12deg);
-	transition: background-color 0.4s;
+	transition: background-color 0.4s, border-color 0.4s, transform 0.4s;
 
 	&::after {
 		top: 50%;
@@ -23,6 +25,19 @@
 		font-size: 0;
 		background-image: url('../img/icons/swiper-arrow.svg');
 		transform: skew(12deg);
+	}
+
+	&:focus {
+		border-color: $white;
+	}
+
+	&:hover {
+		background-color: transparent;
+		border-color: $orange-500;
+	}
+
+	&:active {
+		transform: scale(0.9) skew(-12deg);
 	}
 }
 

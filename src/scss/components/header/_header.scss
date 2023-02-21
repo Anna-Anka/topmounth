@@ -40,6 +40,7 @@
 	&__contact {
 		position: relative;
 		padding-left: 32px;
+        @include link;
 
 		&:not(:last-child) {
 			@include adaptiv-value('margin-right', 40, 20, 1);
@@ -99,6 +100,7 @@
 	&__account {
 		position: relative;
 		padding-left: 28px;
+        @include link;
 
 		&::before {
 			@include icon;

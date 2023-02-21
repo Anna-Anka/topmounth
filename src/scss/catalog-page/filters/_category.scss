@@ -16,9 +16,23 @@
 
 	&__link {
 		color: $dark-600;
+		transition: color 0.4s, box-shadow 0.4s, transform 0.4s, opacity 0.4s;
 
 		&--current {
 			color: $dark-800;
+		}
+
+		&:focus {
+            outline: 0;
+			box-shadow: 0 0 0 1px $orange-500;
+		}
+
+		&:hover {
+			color: $orange-500;
+		}
+
+		&:active {
+			color: $grey-700;
 		}
 	}
 }

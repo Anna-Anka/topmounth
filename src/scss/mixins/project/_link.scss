@@ -1,0 +1,22 @@
+@mixin link {
+	transition: color 0.4s, box-shadow 0.4s;
+
+	&:focus {
+		outline: 0;
+		box-shadow: 0 0 0 1px $orange-500;
+	}
+
+	&:hover {
+		color: $orange-500;
+	}
+
+	&:active {
+		color: $grey-500;
+	}
+
+    @include mq(lg) {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}

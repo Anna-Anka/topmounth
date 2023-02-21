@@ -1,15 +1,16 @@
 .top-slider {
-    padding-top: 12px;
-    
+	padding-top: 12px;
+
 	&__item {
 		position: relative;
 		width: 100%;
 		max-width: 1300px;
 		padding-bottom: 20%;
+		overflow: hidden;
 
-        @include mq(lg) {
-            padding-bottom: 25%;
-        }
+		@include mq(lg) {
+			padding-bottom: 25%;
+		}
 
 		@include mq(md) {
 			padding-bottom: 30%;
@@ -17,7 +18,8 @@
 	}
 
 	&__link {
-        @include resize-img;
-        display: block;
+		@include resize-img;
+		z-index: 2;
+		display: block;
 	}
 }

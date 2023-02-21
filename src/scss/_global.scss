@@ -63,11 +63,25 @@ body {
 	width: 100%;
 	@include adaptiv-value('max-width', 205, 160, 1);
 	@include adaptiv-value('height', 25, 20, 1);
+	transition: box-shadow 0.4s, transform 0.4s, opacity 0.4s;
 
 	&__img {
 		width: 100%;
 		height: 100%;
 		object-fit: contain;
+	}
+
+	&:focus {
+		outline: 0;
+		box-shadow: 0 0 0 2px $orange-500;
+	}
+
+	&:hover {
+		transform: scale(0.9);
+	}
+
+	&:active {
+		opacity: 0.8;
 	}
 }
 
@@ -78,9 +92,9 @@ body {
 	z-index: -1;
 	width: 100%;
 	height: 100%;
+	overflow: hidden;
 	background-color: rgba($dark-800, 0.5);
 	opacity: 0;
-    overflow: hidden;
 
 	&--active {
 		z-index: 4;
@@ -121,23 +135,65 @@ body {
 }
 
 .button {
+	position: relative;
+	z-index: 2;
 	padding: 12px 24px;
 	color: $white;
 	font-weight: $fw-600;
 	background-color: $orange-500;
+	transition: color 0.4s, box-shadow 0.4s, transform 0.4s;
 	@include flex-all-center;
+
+	&::before {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		z-index: -1;
+		width: 0;
+		height: 100%;
+		background-color: $dark-800;
+		transition: width 0.4s;
+		content: '';
+	}
+
+	&:focus {
+		outline: 0;
+		box-shadow: 0 0 0 2px $orange-500;
+	}
+
+	&:focus,
+	&:hover {
+		&::before {
+			width: 100%;
+		}
+	}
+
+	&:active {
+		transform: scale(0.9);
+	}
 
 	&--border {
 		color: $dark-800;
 		background-color: transparent;
-		border: 2px solid $orange-500;
+		box-shadow: 0 0 0 2px $orange-500;
+
+		&:focus {
+			color: $white;
+		}
+
+		&:hover {
+			color: $white;
+			box-shadow: none;
+		}
 	}
 }
 
 .more {
 	position: relative;
-	padding-right: 30px;
+	padding-right: 26px;
 	color: $dark-800;
+    transform: color 0.4s, box-shadow 0.4s;
 
 	&::before {
 		@include icon;
@@ -155,6 +211,23 @@ body {
 		&::before {
 			transform: translateY(-50%) rotate(180deg);
 		}
+	}
+
+	&:focus {
+		outline: 0;
+		box-shadow: 0 0 0 1px $orange-500;
+	}
+
+	&:hover {
+		color: $orange-500;
+
+        &::before {
+            filter: invert(53%) sepia(30%) saturate(6052%) hue-rotate(354deg) brightness(97%) contrast(90%);
+        }
+	}
+
+	&:active {
+		color: $grey-700;
 	}
 }
 
@@ -191,5 +264,3 @@ body {
 		text-decoration: line-through;
 	}
 }
-
-

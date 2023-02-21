@@ -34,13 +34,13 @@
 
 	&__item {
 		position: relative;
-		padding: 0 10px 0 10px;
+		padding: 17px 10px;
 		border: 2px solid $grey-400;
 		border-top-width: 0;
 		border-left-width: 0;
 
 		@include mq(md) {
-			padding: 0 5px 0 5px;
+            padding: 10px 5px;
 		}
 	}
 
@@ -60,4 +60,8 @@
 		height: 100%;
 		object-fit: contain;
 	}
+
+    .brand-card {
+        margin: 0 auto;
+    }
 }

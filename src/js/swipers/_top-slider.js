@@ -16,8 +16,13 @@ export const topSlider = () => {
 
             breakpoints: {
 
-                1200: {
+                1400: {
                     spaceBetween: -45,
+                    slidesPerView: 1.5,
+                },
+
+                1200: {
+                    spaceBetween: -25,
                     slidesPerView: 1.5,
                 },
 

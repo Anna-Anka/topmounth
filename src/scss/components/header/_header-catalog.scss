@@ -36,6 +36,8 @@
 	}
 
 	&__link {
+        @include link;
+
 		@include mq(xl) {
 			display: block;
 			text-align: right;

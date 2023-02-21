@@ -1,16 +1,4 @@
 .filter {
-	&--close {
-		.filter__toggle {
-			&::before {
-				transform: translate(50%, -50%) rotate(180deg);
-			}
-		}
-
-		.filter__box {
-			display: none;
-		}
-	}
-
 	&__top {
 		@include flex-center-sb;
 	}
@@ -26,6 +14,7 @@
 		position: relative;
 		width: 28px;
 		height: 28px;
+        transition: opacity 0.4s, box-shadow 0.4s;
 
 		&::before {
 			@include icon;
@@ -38,15 +27,30 @@
 				brightness(98%) contrast(87%);
 			transition: transform 0.4s;
 		}
+
+		&--close {
+			&::before {
+				transform: translate(50%, -50%) rotate(180deg);
+			}
+		}
+        
+        &:focus {
+            outline: 0;
+            box-shadow: 0 0 0 2px $orange-500;
+        }
+
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &:active {
+            opacity: 0.5;
+        }
+
 	}
 
-	&__items {
-		padding-top: 12px;
-	}
-
+	&__items,
 	&__item {
-		margin-bottom: 12px;
-
 		&:not(:last-child) {
 			margin-bottom: 12px;
 		}
@@ -55,6 +59,30 @@
 	&__content {
 		display: flex;
 		align-items: center;
+        cursor: pointer;
+        transition: color 0.4s;
+
+        &:hover {
+            color: $dark-800;
+        }
+	}
+
+	&__box {
+		z-index: 5;
+		box-sizing: content-box;
+		padding-top: 20px;
+		overflow: visible;
+		opacity: 1;
+		transition: max-height 0.4s, padding-top 0.4s, opacity 0.4s;
+		will-change: max-height;
+
+		&--close {
+			box-sizing: content-box;
+			padding: 0;
+			overflow: hidden;
+			opacity: 0;
+			will-change: max-height;
+		}
 	}
 
 	&__hidden {
@@ -86,7 +114,7 @@
 		width: 16px;
 		height: 16px;
 		margin-right: 6px;
-		border: 1.5px solid $orange-500;
+		border: 1px solid $orange-500;
 
 		&::before {
 			position: absolute;

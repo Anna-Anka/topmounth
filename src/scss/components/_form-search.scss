@@ -22,9 +22,22 @@
 		padding: 9px 12px;
 		background-color: $dark-700;
 		border-radius: 5px;
+        transition: box-shadow 0.4s;
 
 		&::placeholder {
-			color: $grey-400;
+			color: $grey-500;
+            transition: color 0.4s;
+		}
+
+		&:focus {
+			outline: 0;
+			box-shadow: 0 0 0 1.5px $orange-500;
+		}
+
+		&:hover {
+			&::placeholder {
+				color: $white;
+			}
 		}
 	}
 }

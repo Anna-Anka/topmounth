@@ -51,6 +51,8 @@
 	}
 
 	&__link {
+		@include link;
+
 		@include mq(xl) {
 			display: block;
 			text-align: right;
@@ -58,14 +60,49 @@
 	}
 
 	&__download {
+		position: relative;
+		z-index: 2;
 		padding: 6px 12px;
 		white-space: nowrap;
 		text-align: center;
-		border: 1px solid $orange-500;
+		box-shadow: 0 0 0 1px $orange-500;
 		@include flex-all-center;
 
 		@include mq(xl) {
 			margin-left: auto;
+		}
+
+		&::before {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			z-index: -1;
+			width: 0;
+			height: 100%;
+			background-color: $orange-500;
+			transition: width 0.4s;
+			content: '';
+		}
+
+		&:focus {
+			outline: 0;
+			box-shadow: 0 0 0 1px $white;
+		}
+
+		&:focus,
+		&:hover {
+			&::before {
+				width: 100%;
+			}
+		}
+
+        &:hover {
+            box-shadow: 0;
+		}
+
+		&:active {
+			transform: scale(0.9);
 		}
 	}
 }

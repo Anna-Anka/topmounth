@@ -1,41 +1,56 @@
 .pagination {
-    @include flex-all-center;
+	@include flex-all-center;
 
 	&__item {
-        &:not(:last-child) {
-           @include adaptiv-value('margin-right', 12, 10, 1);
-        }
+		&:not(:last-child) {
+			@include adaptiv-value('margin-right', 12, 10, 1);
+		}
 	}
 
 	&__link {
 		@include flex-all-center;
-        @include adaptiv-value('width', 44, 40, 1);
-        @include adaptiv-value('height', 44, 40, 1);
+		@include adaptiv-value('width', 44, 40, 1);
+		@include adaptiv-value('height', 44, 40, 1);
 		background-color: transparent;
-		transition: background-color 0.4s, color 0.4s;
+		border: 1px solid transparent;
+		transition: background-color 0.4s, color 0.4s, border-color 0.4s, transform 0.4s;
 
 		&--current {
 			color: $white;
 			background-color: $orange-500;
+            pointer-events: none;
 		}
 
-        &--prevent,
-        &--next {
-            position: relative;
+		&--prevent,
+		&--next {
+			position: relative;
 
-            &::before {
-                @include icon;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%) rotate(90deg);
-                background-image: url('../img/icons/arrow.svg');
-            }
-        }
+			&::before {
+				@include icon;
+				top: 50%;
+				left: 50%;
+				background-image: url('../img/icons/arrow.svg');
+				transform: translate(-50%, -50%) rotate(90deg);
+			}
+		}
 
-        &--next {
-            &::before {
-                transform: translate(-50%, -50%) rotate(-90deg);
-            }
-        }
+		&--next {
+			&::before {
+				transform: translate(-50%, -50%) rotate(-90deg);
+			}
+		}
+
+		&:focus {
+			border-color: $orange-500;
+			outline: 0;
+		}
+
+		&:hover {
+			border-color: $dark-800;
+		}
+
+		&:active {
+			transform: scale(0.9);
+		}
 	}
 }
