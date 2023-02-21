@@ -63,15 +63,22 @@
 			margin-bottom: 32px;
 		}
 
-        @include mq(sm) {
-            flex-direction: column;
-        }
+		@include mq(sm) {
+			flex-direction: column;
+		}
 	}
 
 	&__contact {
 		position: relative;
+		align-self: flex-start;
 		padding-left: 32px;
 		color: $grey-500;
+		@include link;
+		transition: color 0.4s, box-shadow 0.4s, opacity 0.4s;
+
+		&:active {
+			opacity: 0.7;
+		}
 
 		&::before {
 			@include icon;
@@ -98,10 +105,10 @@
 		&:not(:last-child) {
 			margin-right: 20px;
 
-            @include mq(sm) {
-                margin-right: 0;
+			@include mq(sm) {
+				margin-right: 0;
 				margin-bottom: 24px;
-            }
+			}
 		}
 
 		@include mq(sm) {
@@ -125,12 +132,12 @@
 
 	&__link {
 		color: $grey-500;
-        @include link;
-        transition: color 0.4s,box-shadow 0.4s, opacity 0.4s;
+		@include link;
+		transition: color 0.4s, box-shadow 0.4s, opacity 0.4s;
 
-        &:active {
-            opacity: 0.7;
-        }
+		&:active {
+			opacity: 0.7;
+		}
 	}
 
 	&__bottom {
@@ -152,7 +159,7 @@
 
 		@include mq(lg) {
 			margin-right: 0;
-            margin-bottom: 20px;
+			margin-bottom: 20px;
 		}
 
 		@include mq(sm) {
@@ -167,7 +174,7 @@
 
 			@include mq(sm) {
 				margin-right: 0;
-                margin-bottom: 16px;
+				margin-bottom: 16px;
 			}
 		}
 	}
@@ -177,35 +184,5 @@
 			flex-direction: column;
 			align-items: flex-start;
 		}
-	}
-}
-
-.social {
-	display: flex;
-
-	&__item {
-		&:not(:last-child) {
-			margin-right: 12px;
-		}
-	}
-
-	&__link {
-		@include bg-conatin;
-		display: block;
-		width: 28px;
-		height: 28px;
-        transition: box-shadow 0.4s, opacity 0.4s, transform 0.4s;
-
-        &:focus {
-            box-shadow: 0 0 0 1px $orange-500;
-        }
-
-        &:hover {
-            transform: scale(0.9);
-        }
-
-        &:active {
-            opacity: 0.7;
-        }
 	}
 }
