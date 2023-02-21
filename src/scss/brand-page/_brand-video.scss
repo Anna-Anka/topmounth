@@ -13,6 +13,7 @@
 		@include bg-cover;
 		@include flex-all-center;
 		height: 45vh;
+        min-height: 250px;
         border: 2px solid transparent;
         transition: transform 0.4s, border-color 0.4s, opacity 0.4s;
 

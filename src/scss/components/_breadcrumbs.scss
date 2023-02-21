@@ -38,6 +38,7 @@
 
 		&--current {
 			color: $grey-700;
+            pointer-events: none;
 		}
 
 		&:focus {
