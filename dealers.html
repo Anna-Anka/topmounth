@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script defer src="js/main.js"></script>
+
+    <title>Topmount — интернет магазин | Каталог</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
+    <!-- <link rel="manifest" href="img/favicons/site.webmanifest"> -->
+    <link rel="mask-icon" href="img/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ff0000">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body class="body">
+    <div class="wrapper">
+<!--  -->
+<header class="header">
+    <div class="overlay" data-menu-overlay></div>
+    <div class="container">
+        <nav class="header__navigation">
+            <div class="header__top">
+                <div class="header__menu">
+                    <a class="header__logo logo" href="#">
+                        <picture>
+                           <source srcset="img/logo.avif" type="image/avif">
+                           <source srcset="img/logo.webp" type="image/webp">
+                           <img class="logo__img" src="img/logo.png" alt="Логотип" width="205" height="25" loading="lazy">
+                        </picture>
+                    </a>
+                    <div class="header-menu">
+                        <ul class="header-menu__items">
+                            <li class="header-menu__item">
+                                <a class="header-menu__link" href="#">
+                                    О нас
+                                </a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="header-menu__link" href="#">
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="header-menu__link" href="#">
+                                    Диллеры
+                                </a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="header-menu__link" href="#">
+                                    Бренды
+                                </a>
+                            </li>
+                        </ul>
+                        <a class="header-menu__download" href="#" data-graph-path="modal-authorization" download>
+                            Прайс-лист
+                        </a>
+                    </div>
+                </div>
+                <div class="header__contacts">
+                    <a class="header__contact header__contact--watsapp" href="#">
+                        WhatsApp
+                    </a>
+                    <a class="header__contact header__contact--phone" href="tel:+88002007093">
+                        8 (800) 200-70-93
+                    </a>
+                </div>
+                <button class="burger-button" type="button" aria-expanded="false" aria-controls="burger-menu" aria-label="открыть меню" data-burger>
+                   <span class="burger-button__line" aria-hidden="true"></span>
+                </button>
+            </div>
+            <div class="header__bottom">
+                <ul class="header-catalog">
+                    <li class="header-catalog__item">
+                        <a class="header-catalog__link" href="#">
+                            Кронштейны
+                        </a>
+                    </li>
+                    <li class="header-catalog__item">
+                        <a class="header-catalog__link" href="#">
+                            Сопутствующие товары
+                        </a>
+                    </li>
+                    <li class="header-catalog__item">
+                        <a class="header-catalog__link" href="#">
+                            Камеры
+                        </a>
+                    </li>
+                    <li class="header-catalog__item">
+                        <a class="header-catalog__link" href="#">
+                            Оптические приборы
+                        </a>
+                    </li>
+                </ul>
+                <div class="header__user">
+                    <form class="header__search form-search" action="#" role="search">
+                        <div class="form-search__content">
+                            <label class="sr-only" for="search">Поиск</label>
+                            <input class="form-search__field" name="search" type="search" placeholder="Поиск" id="search" required>
+                        </div>
+                    </form>
+                    <button class="header__account" type="button" data-graph-path="modal-login">
+                        Войти
+                    </button>
+                </div>
+            </div>
+            <div class="burger-menu" id="burger-menu" data-menu>
+                <div class="burger-menu__content">
+                    <div class="header-menu">
+                        <ul class="header-menu__items">
+                            <li class="header-menu__item">
+                                <a class="header-menu__link" href="#" data-menu-link>
+                                    О нас
+                                </a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="header-menu__link" href="#" data-menu-link>
+                                    Контакты
+                                </a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="header-menu__link" href="#" data-menu-link>
+                                    Диллеры
+                                </a>
+                            </li>
+                            <li class="header-menu__item">
+                                <a class="header-menu__link" href="#" data-menu-link>
+                                    Бренды
+                                </a>
+                            </li>
+                        </ul>
+                        <a class="header-menu__download" href="#" download>
+                            Прайс-лист
+                        </a>
+                    </div>
+                    <ul class="header-catalog">
+                        <li class="header-catalog__item">
+                            <a class="header-catalog__link" href="#" data-menu-link>
+                                Кронштейны
+                            </a>
+                        </li>
+                        <li class="header-catalog__item">
+                            <a class="header-catalog__link" href="#" data-menu-link>
+                                Сопутствующие товары
+                            </a>
+                        </li>
+                        <li class="header-catalog__item">
+                            <a class="header-catalog__link" href="#" data-menu-link>
+                                Камеры
+                            </a>
+                        </li>
+                        <li class="header-catalog__item">
+                            <a class="header-catalog__link" href="#" data-menu-link>
+                                Оптические приборы
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<button class="button modal-login" data-graph-path="modal-login" style="display: none;">Открыть</button>
+<button class="button modal-authorization" data-graph-path="modal-authorization" style="display: none;">Открыть 2</button>
+
+<div class="graph-modal">
+    <div class="graph-modal__container graph-modal__container--login" role="dialog" aria-modal="true" data-graph-target="modal-login">
+        <div class="graph-modal__box">
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+            <div class="graph-modal__content">
+                <span class="graph-modal__subtitle">Вход</span>
+                <form class="graph-modal__form" action="#">
+                    <div class="graph-modal__items">
+                        <div class="graph-modal__item">
+                            <label class="sr-only" for="login-email">Введите ваше логин</label>
+                            <input class="graph-modal__field" name="login-email" type="email" placeholder="Ваш логин" id="login-email" required>
+                        </div>
+                        <div class="graph-modal__item">
+                            <label class="sr-only" for="login-password">Введите ваш пароль</label>
+                            <input class="graph-modal__field" name="login-password" type="password" placeholder="Пароль" id="login-password" required>
+                        </div>
+                    </div>
+                    <p class="graph-modal__text">
+                        Нажимая кнопку «Войти», вы подтверждаете <a class="graph-modal__link" href="#">Согласие на обработку персональных данных</a>
+                    </p>
+                    <button class="graph-modal__button button" type="button">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="graph-modal__container graph-modal__container--authorization" role="dialog" aria-modal="true" data-graph-target="modal-authorization">
+        <div class="graph-modal__box">
+            <button class="graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+            <div class="graph-modal__content">
+                <span class="graph-modal__subtitle">Вы не авторизованы</span>
+                <form class="graph-modal__form" action="#">
+                    <div class="graph-modal__text">
+                        <p>
+                            Для создания заказа или скачивания прайс-листа вы должны авторизоваться как диллер.
+                        </p>
+                        <p>
+                            Или купите товар у одного из наших диллеров.
+                        </p>
+                    </div>
+                    <div class="graph-modal__items">
+                        <div class="graph-modal__item">
+                            <label class="sr-only" for="login-email">Введите ваше логин</label>
+                            <input class="graph-modal__field" name="login-email" type="email" placeholder="Ваш логин" id="login-email" required>
+                        </div>
+                        <div class="graph-modal__item">
+                            <label class="sr-only" for="login-password">Введите ваш пароль</label>
+                            <input class="graph-modal__field" name="login-password" type="password" placeholder="Пароль" id="login-password" required>
+                        </div>
+                    </div>
+                    <p class="graph-modal__text">
+                        Нажимая кнопку «Войти», вы подтверждаете <a class="graph-modal__link" href="#">Согласие на обработку персональных данных</a>
+                    </p>
+                    <div class="graph-modal__buttons">
+                        <button class="graph-modal__button button" type="button">Войти</button>
+                        <a class="graph-modal__button button button--border" href="#">Выбрать диллера</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="breadcrumbs">
+    <div class="container">
+
+        <ul class="breadcrumbs__items">
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="#">Главная</a>
+            </li>
+            <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link breadcrumbs__link--current" aria-current="page">Дилеры</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<main class="main">
+    <section class="dealers">
+    <div class="container">
+        <h1 class="dealers__title title">
+            Дилеры
+        </h1>
+        <div class="tabs" data-tabs="dealers">
+            <ul class="tabs__nav">
+                <li class="tabs__nav-item">
+                    <a class="tabs__nav-btn" href="#">Москва</a>
+                </li>
+                <li class="tabs__nav-item">
+                    <a class="tabs__nav-btn" href="#">Санкт-Петербург</a>
+                </li>
+                <li class="tabs__nav-item">
+                    <a class="tabs__nav-btn" href="#">Астрахань</a>
+                </li>
+            </ul>
+            <div class="tabs__content">
+                <div class="tabs__panel">
+                    <ul class="tabs__items">
+                        <li class="tabs__item">
+                            <span class="tabs__subtitle">
+                                Магазин «Big Game» в ТРК СпортЕX
+                            </span>
+                            <div class="tabs__text">
+                                <span>г. Москва, Комсомольская площадь, дом 6</span>
+                                <span>Ежедневно с 09:00 до 22:00</span>
+                            </div>
+                            <div class="tabs__contacts">
+                                <a class="tabs__contact tabs__contact--phone" href="#">
+                                    8 495 777-77-71
+                                </a>
+                                <a class="tabs__contact tabs__contact--site" href="#">
+                                    www.biggame.ru
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tabs__item">
+                            <span class="tabs__subtitle">
+                                Магазин «Big Game» в ТРК СпортЕX Магазин «Big Game» в ТРК СпортЕX
+                            </span>
+                            <div class="tabs__text">
+                                <span>г. Москва, Комсомольская площадь, дом 6 г. Москва, Комсомольская площадь, дом 6</span>
+                                <span>Ежедневно с 09:00 до 22:00</span>
+                            </div>
+                            <div class="tabs__contacts">
+                                <a class="tabs__contact tabs__contact--phone" href="#">
+                                    8 495 777-77-71
+                                </a>
+                                <a class="tabs__contact tabs__contact--site" href="#">
+                                    www.biggame.ruwww.biggame.ru
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tabs__item">
+                            <span class="tabs__subtitle">
+                                Магазин «Big Game» в ТРК СпортЕX
+                            </span>
+                            <div class="tabs__text">
+                                <span>г. Москва, Комсомольская площадь, дом 6</span>
+                                <span>Ежедневно с 09:00 до 22:00</span>
+                            </div>
+                            <div class="tabs__contacts">
+                                <a class="tabs__contact tabs__contact--phone" href="#">
+                                    8 495 777-77-71
+                                </a>
+                                <a class="tabs__contact tabs__contact--site" href="#">
+                                    www.biggame.ru
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tabs__item">
+                            <span class="tabs__subtitle">
+                                Магазин «Big Game» в ТРК СпортЕX Магазин «Big Game» в ТРК СпортЕX
+                            </span>
+                            <div class="tabs__text">
+                                <span>г. Москва, Комсомольская площадь, дом 6 г. Москва, Комсомольская площадь, дом 6</span>
+                                <span>Ежедневно с 09:00 до 22:00</span>
+                            </div>
+                            <div class="tabs__contacts">
+                                <a class="tabs__contact tabs__contact--phone" href="#">
+                                    8 495 777-77-71
+                                </a>
+                                <a class="tabs__contact tabs__contact--site" href="#">
+                                    www.biggame.ruwww.biggame.ru
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tabs__map">
+                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps"
+                                style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a><a
+                                href="https://yandex.ru/maps/geo/moskva/53000094/?ll=37.385534%2C55.584227&utm_medium=mapframe&utm_source=maps&z=9.65"
+                                style="color:#eee;font-size:12px;position:absolute;top:14px;">Москва — Яндекс Карты</a><iframe
+                                src="https://yandex.ru/map-widget/v1/?ll=37.385534%2C55.584227&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzAwMDA5NBIa0KDQvtGB0YHQuNGPLCDQnNC%2B0YHQutCy0LAiCg2GeBZCFQEGX0I%3D&z=9.65"
+                                frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                    </div>
+                </div>
+                <div class="tabs__panel">
+                    <ul class="tabs__items">
+                        <li class="tabs__item">
+                            <span class="tabs__subtitle">
+                                Магазин «Big Game» в ТРК СпортЕX
+                            </span>
+                            <div class="tabs__text">
+                                <span>г. Москва, Комсомольская площадь, дом 6</span>
+                                <span>Ежедневно с 09:00 до 22:00</span>
+                            </div>
+                            <div class="tabs__contacts">
+                                <a class="tabs__contact tabs__contact--phone" href="#">
+                                    8 495 777-77-71
+                                </a>
+                                <a class="tabs__contact tabs__contact--site" href="#">
+                                    www.biggame.ru
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tabs__item">
+                            <span class="tabs__subtitle">
+                                Магазин «Big Game» в ТРК СпортЕX Магазин «Big Game» в ТРК СпортЕX
+                            </span>
+                            <div class="tabs__text">
+                                <span>г. Москва, Комсомольская площадь, дом 6 г. Москва, Комсомольская площадь, дом 6</span>
+                                <span>Ежедневно с 09:00 до 22:00</span>
+                            </div>
+                            <div class="tabs__contacts">
+                                <a class="tabs__contact tabs__contact--phone" href="#">
+                                    8 495 777-77-71
+                                </a>
+                                <a class="tabs__contact tabs__contact--site" href="#">
+                                    www.biggame.ruwww.biggame.ru
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tabs__map">
+                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Яндекс Карты</a><a href="https://yandex.ru/maps/geo/sankt_peterburg/53000093/?ll=30.796735%2C59.818530&utm_medium=mapframe&utm_source=maps&z=9.36" style="color:#eee;font-size:12px;position:absolute;top:14px;">Санкт-Петербург — Яндекс Карты</a><iframe src="https://yandex.ru/map-widget/v1/?ll=30.796735%2C59.818530&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzAwMDA5MxIr0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsyIKDW%2BG8kEVfcFvQg%3D%3D&z=9.36" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                    </div>
+                </div>
+                <div class="tabs__panel">
+                    <ul class="tabs__items">
+                        <li class="tabs__item">
+                            <span class="tabs__subtitle">
+                                Магазин «Big Game» в ТРК СпортЕX
+                            </span>
+                            <div class="tabs__text">
+                                <span>г. Москва, Комсомольская площадь, дом 6</span>
+                                <span>Ежедневно с 09:00 до 22:00</span>
+                            </div>
+                            <div class="tabs__contacts">
+                                <a class="tabs__contact tabs__contact--phone" href="#">
+                                    8 495 777-77-71
+                                </a>
+                                <a class="tabs__contact tabs__contact--site" href="#">
+                                    www.biggame.ru
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tabs__item">
+                            <span class="tabs__subtitle">
+                                Магазин «Big Game» в ТРК СпортЕX Магазин «Big Game» в ТРК СпортЕX
+                            </span>
+                            <div class="tabs__text">
+                                <span>г. Москва, Комсомольская площадь, дом 6 г. Москва, Комсомольская площадь, дом 6</span>
+                                <span>Ежедневно с 09:00 до 22:00</span>
+                            </div>
+                            <div class="tabs__contacts">
+                                <a class="tabs__contact tabs__contact--phone" href="#">
+                                    8 495 777-77-71
+                                </a>
+                                <a class="tabs__contact tabs__contact--site" href="#">
+                                    www.biggame.ruwww.biggame.ru
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="tabs__map">
+                        <div style="position:relative;overflow:hidden;"><a href="https://yandex.ru/maps/37/astrahan/?utm_medium=mapframe&utm_source=maps"
+                                style="color:#eee;font-size:12px;position:absolute;top:0px;">Астрахань</a><a
+                                href="https://yandex.ru/maps/geo/astrakhan/53166023/?ll=48.036687%2C46.365409&utm_medium=mapframe&utm_source=maps&z=12" style="color:#eee;font-size:12px;position:absolute;top:14px;">Астрахань
+                                — Яндекс Карты</a><iframe
+                                src="https://yandex.ru/map-widget/v1/?ll=48.036687%2C46.365409&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1MzE2NjAyMxIg0KDQvtGB0YHQuNGPLCDQkNGB0YLRgNCw0YXQsNC90YwiCg3mHkBCFfVjOUI%3D&z=12" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+</main>
+
+<footer class="footer">
+    <div class="footer__top">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__contacts">
+                    <h3 class="footer__title">Контакты</h3>
+                    <div class="footer__connection">
+                        <a class="footer__contact footer__contact--phone" href="tel:+78002007093">
+                            8 (800) 200-70-93
+                        </a>
+                        <a class="footer__contact footer__contact--email" href="mailto:info@topmount.ru">
+                            info@topmount.ru
+                        </a>
+                    </div>
+                    <ul class="social">
+                        <li class="social__item">
+                            <a class="social__link" href="#" target="_blank" style="background-image: url('img/icons/social/vk.svg');">
+                                <span class="sr-only">Вк</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" target="_blank" style="background-image: url('img/icons/social/instagram.svg');">
+                                <span class="sr-only">Инстаграм</span>
+                            </a>
+                        </li>
+                        <li class="social__item">
+                            <a class="social__link" href="#" target="_blank" style="background-image: url('img/icons/social/youtube.svg');">
+                                <span class="sr-only">Ютуб</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="footer__navigation">
+                    <li class="footer__list">
+                        <h3 class="footer__title">Каталог</h3>
+                        <ul class="footer__items">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Кронштейны</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Оптические приборы</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Камеры для тиров</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Аксесуары</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer__list">
+                        <h3 class="footer__title">Клиентам</h3>
+                        <ul class="footer__items">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Прайс-лист</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Каталоги и инструкции по эксплуатации</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="footer__list">
+                        <h3 class="footer__title">Компания</h3>
+                        <ul class="footer__items">
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">О нас</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Контакты</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Дилеры</a>
+                            </li>
+                            <li class="footer__item">
+                                <a class="footer__link" href="#">Бренды</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer__bottom">
+        <div class="container">
+            <div class="footer__secondary">
+                <ul class="footer__private">
+                    <li class="footer__info">
+                        <a class="footer__link" href="#">Политика конфиденциальности</a>
+                    </li>
+                    <li class="footer__info">
+                        <a class="footer__link" href="#">Публичная оферта</a>
+                    </li>
+                    <li class="footer__info">
+                        <a class="footer__link" href="#">Персональные данные</a>
+                    </li>
+                </ul>
+                <p class="footer__copy">
+                    © 2023 «TopMOunt» — все права защищены
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--  -->
+</div>
+</body>
+
+</html>
