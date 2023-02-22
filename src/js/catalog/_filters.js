@@ -1,5 +1,5 @@
-import { disableScroll } from '../../templates/disable-scroll';
-import { enableScroll } from '../../templates/enable-scroll';
+import { disableScroll } from '../templates/disable-scroll';
+import { enableScroll } from '../templates/enable-scroll';
 
 export const filters = () => {
     if (document.querySelector('.catalog__filters')) {

@@ -189,48 +189,6 @@ body {
 	}
 }
 
-.more {
-	position: relative;
-	padding-right: 26px;
-	color: $dark-800;
-    transform: color 0.4s, box-shadow 0.4s;
-
-	&::before {
-		@include icon;
-		top: 50%;
-		right: 0;
-		left: unset;
-		width: 16px;
-		height: 16px;
-		background-image: url('../img/icons/arrow.svg');
-		transform: translateY(-50%);
-		transition: transform 0.4s;
-	}
-
-	&--active {
-		&::before {
-			transform: translateY(-50%) rotate(180deg);
-		}
-	}
-
-	&:focus {
-		outline: 0;
-		box-shadow: 0 0 0 1px $orange-500;
-	}
-
-	&:hover {
-		color: $orange-500;
-
-        &::before {
-            filter: invert(53%) sepia(30%) saturate(6052%) hue-rotate(354deg) brightness(97%) contrast(90%);
-        }
-	}
-
-	&:active {
-		color: $grey-700;
-	}
-}
-
 .product-label {
 	max-width: max-content;
 	padding: 4px 8px;
