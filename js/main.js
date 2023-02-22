@@ -81,41 +81,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var graph_tabs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! graph-tabs */ "./node_modules/graph-tabs/src/graph-tabs.js");
 var _document;
 
-/* eslint-disable import/extensions */
-
-/* eslint-disable spaced-comment */
-
-/* eslint-disable import/no-relative-packages */
-// Данный файл - лишь собрание подключений готовых компонентов.
-// Рекомендуется создавать отдельный файл в папке components и подключать все там
-// * stepper
-//import { stepperFunction } from "./functions/stepper";
-//stepperFunction()
-// * accordion
-//import { accordionFunction } from "./templates/accordion";
-//accordionFunction();
-// * Определение операционной системы на мобильных
-// import { mobileCheck } from "./functions/mobile-check";
-// console.log(mobileCheck())
-// * Определение ширины экрана
-// import { isMobile, isTablet, isDesktop } from './functions/check-viewport';
-// if (isDesktop()) {
-//   console.log('...')
-// }
-// * Троттлинг функции (для ресайза, ввода в инпут, скролла и т.д.)
-// import { throttle } from './functions/throttle';
-// let yourFunc = () => { console.log('throttle') };
-// let func = throttle(yourFunc);
-// window.addEventListener('resize', func);
-// * Фикс фулскрин-блоков
-// import './functions/fix-fullheight';
 // * Реализация бургер-меню
 
-(0,_templates_burger__WEBPACK_IMPORTED_MODULE_0__.burger)(); // * Реализация остановки скролла (не забудьте вызвать функцию)
-// import { disableScroll } from './templates/disable-scroll';
-// * Реализация включения скролла (не забудьте вызвать функцию)
-// import { enableScroll } from './templates/enable-scroll';
-// * Реализация модального окна
+(0,_templates_burger__WEBPACK_IMPORTED_MODULE_0__.burger)(); // * Реализация модального окна
 
 
 const modal = new graph_modal__WEBPACK_IMPORTED_MODULE_1__["default"]();
@@ -142,94 +110,7 @@ if (document.querySelector('[data-tabs="dealers"]')) {
   const tabs = new graph_tabs__WEBPACK_IMPORTED_MODULE_2__["default"]('dealers');
 }
 
-; // * Получение высоты шапки сайта (не забудьте вызвать функцию)
-// import { getHeaderHeight } from './functions/header-height';
-// * Подключение плагина кастом-скролла
-//import 'simplebar';
-// * Подключение плагина для позиционирования тултипов
-// import { createPopper, right} from '@popperjs/core';
-// createPopper(el, tooltip, {
-//   placement: 'right'
-// });
-// * Подключение анимаций по скроллу
-// import AOS from 'aos';
-// AOS.init();
-// * Подключение параллакса блоков при скролле
-// import Rellax from 'rellax';
-// const rellax = new Rellax('.rellax');
-// * Подключение галереи (Fullscreen Lightbox)
-//import 'fslightbox'
-// * Подключение mixit up
-//import mixitup from 'mixitup';
-//let mixer = mixitup('.sort-content');
-// * Подключение Isotope
-// import Isotope from "isotope-layout";
-// const elem = document.querySelector('.');
-// const iso = new Isotope(elem, {
-//     itemSelector: '.',
-//     layoutMode: 'masonry'
-// });
-// * Подключение inputmask
-// import Inputmask from "inputmask";
-// let inputs = document.querySelectorAll('input[type="tel"]')
-// let im = new Inputmask('+7 (999) 999-99-99')
-// im.mask(inputs)
-// * Подключение choices.js
-// import Choices from "choices.js";
-// const defaultSelect = () => {
-//     const element = document.querySelector('.default');
-//     const choices = new Choices(element, {
-//         searchEnabled: false
-//     });
-// }
-// defaultSelect()
-// * Подключение just-validate
-//import JustValidate from "just-validate";
-//Если несколько форм
-// const forms = document.querySelectorAll('.form')
-// forms.forEach((form) => {
-//     const formValidation = new JustValidate(form)
-//     formValidation.addField('input[type="email"]', [
-//         {
-//             rule: 'required',
-//             errorMessage: 'Поле должно быть заполнено',
-//         },
-//         {
-//             rule: 'email',
-//             errorMessage: 'Введите корректный email',
-//         },
-//     ]);
-// })
-//Если одна форма
-// const validation = new JustValidate('.test');
-// validation.addField('input[type="email"]', [
-//     {
-//         rule: 'required',
-//         errorMessage: 'Поле должно быть заполнено',
-//     },
-//     {
-//         rule: 'email',
-//         errorMessage: 'Введите корректный email',
-//     },
-// ]);
-// * Подключение marquee
-//import { handleMarquee } from "./templates/marquee";
-//handleMarquee();
-// * Подключение липкой шапки
-//import { headerSticky } from "./templates/header-sticky";
-//headerSticky();
-// * Подключение плавного скролла
-//import { smoothScroll } from "./templates/smooth-scroll";
-//smoothScroll();
-// * Подключение карты
-//import { mapFunction } from './templates/map';
-//mapFunction();
-// * Подключение паралакса
-//import { parallax } from './templates/parallax';
-//parallax();
-// * Подключение печатающегося текста
-//import { type } from './templates/type';
-//type();
+;
 
 /***/ }),
 
@@ -353,8 +234,8 @@ const filters = () => {
   if (document.querySelector('.catalog__filters')) {
     const button = document.querySelector('.catalog__filters');
     const filters = document.querySelector('.catalog-navigation');
+    const buttonClose = document.querySelector('.catalog-navigation__close');
     const overlay = document.querySelector('.catalog .overlay');
-    const buttonFilters = document.querySelector('.catalog__filters');
 
     const checkClass = () => {
       if (filters.classList.contains('catalog-navigation--open')) {
@@ -371,13 +252,16 @@ const filters = () => {
     button.addEventListener('click', () => {
       filters.classList.toggle('catalog-navigation--open');
       overlay.classList.toggle('overlay--active');
-      buttonFilters.classList.toggle('catalog__filters--active');
       checkClass();
     });
     overlay.addEventListener('click', () => {
       filters.classList.remove('catalog-navigation--open');
       overlay.classList.remove('overlay--active');
-      buttonFilters.classList.remove('catalog__filters--active');
+      checkClass();
+    });
+    buttonClose.addEventListener('click', () => {
+      filters.classList.remove('catalog-navigation--open');
+      overlay.classList.remove('overlay--active');
       checkClass();
     });
   }
@@ -503,7 +387,7 @@ const topSlider = () => {
       },
       breakpoints: {
         1400: {
-          spaceBetween: -45,
+          spaceBetween: -35,
           slidesPerView: 1.5
         },
         1200: {
@@ -904,22 +788,22 @@ class GraphTabs {
 
     this.tabsBtns.forEach((el, i) => {
       el.setAttribute('role', 'tab');
-      el.setAttribute('tabindex', '-1');
       el.setAttribute('id', `${this.selector}${i + 1}`);
       el.classList.remove('tabs__nav-btn--active');
+
+      el.removeAttribute('tabindex');
     });
 
     this.tabsPanels.forEach((el, i) => {
       el.setAttribute('role', 'tabpanel');
-      el.setAttribute('tabindex', '-1');
       el.setAttribute('aria-labelledby', this.tabsBtns[i].id);
       el.classList.remove('tabs__panel--active');
     });
 
     this.tabsBtns[0].classList.add('tabs__nav-btn--active');
-    this.tabsBtns[0].removeAttribute('tabindex');
     this.tabsBtns[0].setAttribute('aria-selected', 'true');
     this.tabsPanels[0].classList.add('tabs__panel--active');
+    this.tabsBtns[0].setAttribute('tabindex', '-1');
   }
 
   events() {
@@ -962,9 +846,7 @@ class GraphTabs {
     newTab.focus();
     newTab.removeAttribute('tabindex');
     newTab.setAttribute('aria-selected', 'true');
-
     oldTab.removeAttribute('aria-selected');
-    oldTab.setAttribute('tabindex', '-1');
 
     let index = Array.prototype.indexOf.call(this.tabsBtns, newTab);
     let oldIndex = Array.prototype.indexOf.call(this.tabsBtns, oldTab);
@@ -974,6 +856,9 @@ class GraphTabs {
 
     this.tabsBtns[oldIndex].classList.remove('tabs__nav-btn--active');
     this.tabsBtns[index].classList.add('tabs__nav-btn--active');
+
+    this.tabsBtns[index].setAttribute('tabindex', '-1');
+    this.tabsBtns[oldIndex].removeAttribute('tabindex');
 
     this.options.isChanged(this);
   }
