@@ -1,6 +1,10 @@
 .preview-products {
 	background-color: $dark-800;
 
+    @include mq(sm) {
+        padding-bottom: 125px;
+    }
+
 	&__title {
 		color: $dark-800;
 

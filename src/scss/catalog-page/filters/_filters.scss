@@ -21,5 +21,9 @@
 		&:not(:last-child) {
 			margin-right: 12px;
 		}
+
+		@include mq(xs) {
+			width: 49%;
+		}
 	}
 }

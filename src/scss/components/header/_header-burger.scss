@@ -24,6 +24,10 @@
 	overflow-y: auto;
 	background-color: $dark-800;
 
+    @include mq(xs) {
+        max-width: 100%;
+    }
+
 	&--active {
 		display: block;
 

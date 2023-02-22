@@ -6,8 +6,9 @@ export const filters = () => {
 
         const button = document.querySelector('.catalog__filters');
         const filters = document.querySelector('.catalog-navigation');
+        const buttonClose = document.querySelector('.catalog-navigation__close');
         const overlay = document.querySelector('.catalog .overlay');
-        const buttonFilters = document.querySelector('.catalog__filters');
+
 
         const checkClass = () => {
             if (filters.classList.contains('catalog-navigation--open')) {
@@ -24,15 +25,19 @@ export const filters = () => {
         button.addEventListener('click', () => {
             filters.classList.toggle('catalog-navigation--open');
             overlay.classList.toggle('overlay--active');
-            buttonFilters.classList.toggle('catalog__filters--active');
             checkClass();
-        })
+        });
 
         overlay.addEventListener('click', () => {
             filters.classList.remove('catalog-navigation--open');
             overlay.classList.remove('overlay--active');
-            buttonFilters.classList.remove('catalog__filters--active');
             checkClass();
         });
+
+        buttonClose.addEventListener('click', () => {
+            filters.classList.remove('catalog-navigation--open');
+            overlay.classList.remove('overlay--active');
+            checkClass();
+        })
     };
 };

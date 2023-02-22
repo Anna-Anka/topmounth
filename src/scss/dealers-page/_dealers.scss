@@ -23,18 +23,12 @@
 			white-space: nowrap;
 			background-color: transparent;
 			border: 2px solid transparent;
-			transition: color 0.4s, background-color 0.4s, border-color 0.4s;
+			transition: color 0.4s, background-color 0.4s, border-color 0.4s, opacity 0.4s;
 			@include adaptiv-value('font-size', 22, 19, 1);
 			@include flex-all-center;
 
-			&--active {
-				color: $white;
-				background-color: $orange-500;
-                pointer-events: none;
-			}
-
 			&:focus {
-				color: $dark-800;
+				color: inherit;
 				border-color: $orange-500;
 				outline: 0;
 			}
@@ -45,6 +39,20 @@
 
 			&:active {
 				color: $dark-600;
+			}
+
+			&--active {
+				color: $white;
+				background-color: $orange-500;
+				pointer-events: none;
+
+				&:focus {
+					color: $white;
+				}
+
+				&:active {
+					opacity: 0.8;
+				}
 			}
 
 			@include mq(md) {
@@ -172,7 +180,7 @@
 				margin-bottom: 30px;
 			}
 
-            @include mq(md) {
+			@include mq(md) {
 				height: 370px;
 			}
 
