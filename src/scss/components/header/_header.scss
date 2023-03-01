@@ -105,6 +105,7 @@
 		&::before {
 			@include icon;
 			background-image: url('../img/icons/account.svg');
+            transform: rotate(0);
 
 			@include mq(md) {
 				width: 28px;
@@ -114,7 +115,8 @@
 
         &--logout {
             &::before {
-                background-image: url('../img/icons/logout.svg');
+                background-image: url('../img/icons/download.svg');
+                transform: rotate(-90deg);
             }
         }
 
