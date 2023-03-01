@@ -17,7 +17,7 @@
 		font-family: $futura;
 		line-height: 1.3;
 		text-transform: uppercase;
-        transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
+		transition: opacity 0.4s, transform 0.4s, box-shadow 0.4s;
 
 		&::before {
 			@include icon;
@@ -32,17 +32,17 @@
 				brightness(95%) contrast(93%);
 		}
 
-        &:focus {
-            box-shadow: 0 0 0 1px $orange-500;
-        }
+		&:focus {
+			box-shadow: 0 0 0 1px $orange-500;
+		}
 
-        &:hover {   
-            transform: scale(0.9);
-        }
+		&:hover {
+			transform: scale(0.9);
+		}
 
-        &:active {
-            opacity: 0.7;
-        }
+		&:active {
+			opacity: 0.7;
+		}
 	}
 
 	&__box {
@@ -88,6 +88,16 @@
 				background-color: $grey-400;
 				transform: rotate(16deg);
 			}
+		}
+	}
+
+	.brand-card {
+		max-width: 238px;
+		height: 78px;
+
+		@include mq(lg) {
+			width: 190px;
+			height: 62px;
 		}
 	}
 }

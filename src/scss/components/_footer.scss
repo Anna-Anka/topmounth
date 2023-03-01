@@ -133,6 +133,7 @@
 	&__link {
 		color: $grey-500;
 		@include link;
+		cursor: pointer;
 		transition: color 0.4s, box-shadow 0.4s, opacity 0.4s;
 
 		&:active {

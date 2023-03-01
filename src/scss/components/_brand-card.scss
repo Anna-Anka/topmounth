@@ -1,13 +1,13 @@
 .brand-card {
 	display: block;
 	width: 100%;
-	max-width: 164px;
-	height: 54px;
+	max-width: 238px;
+	height: 78px;
 	transition: box-shadow 0.4s;
 
 	@include mq(lg) {
-		width: 120px;
-		height: 40px;
+		max-width: 190px;
+		height: 62px;
 	}
 
 	&:focus {
@@ -24,6 +24,11 @@
 		.brand-card__img {
 			transform: scale(0.9);
 		}
+	}
+
+	picture {
+		display: block;
+		height: 100%;
 	}
 
 	&__img {

@@ -13,30 +13,38 @@
 
 	&__top {
 		@include flex-center-sb;
-		margin-bottom: 24px;
+
+		@include mq(lg) {
+			margin-bottom: 24px;
+		}
+
+		@include mq(sm) {
+			flex-direction: column;
+		}
 	}
 
 	&__download {
 		position: relative;
 		max-width: fit-content;
 		margin-right: 12px;
-		padding: 12px 56px 12px 24px;
+		margin-bottom: 24px;
+		padding: 12px 24px;
 		font-weight: 400;
 		border: 1px solid $orange-500;
 		border-width: 1px;
-		@include flex-all-center;
 		transition: color 0.4s, background-color 0.4s, border-color 0.4s,
 			transform 0.4s;
+		@include flex-all-center;
 
-		&::before {
-			@include icon;
-			top: 50%;
-			right: 24px;
-			left: unset;
-			width: 20px;
-			height: 20px;
-			background-image: url('../img/icons/download.svg');
-			transform: translateY(-50%);
+		@include mq(lg) {
+			margin-bottom: 0;
+		}
+
+		@include mq(sm) {
+			width: 100%;
+			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: 16px;
 		}
 
 		&:focus {
@@ -57,20 +65,40 @@
 	&__filters {
 		position: relative;
 		display: none;
-		width: 44px;
-		height: 44px;
 		margin-left: auto;
+		padding: 12px 24px;
+		border: 1px solid $orange-500;
+
+		@include mq(lg) {
+			display: flex;
+			@include flex-all-center;
+		}
+
+		@include mq(sm) {
+			width: 100%;
+		}
+	}
+
+	&__icon {
+		position: relative;
+		padding-left: 34px;
 
 		&::before {
 			@include icon;
 			top: 50%;
-			left: 50%;
-			background-image: url('../img/icons/filter.svg');
-			transform: translate(-50%, -50%);
+			transform: translateY(-50%);
 		}
 
-		@include mq(lg) {
-			display: flex;
+		&--filter {
+			&::before {
+				background-image: url('../img/icons/filter.svg');
+			}
+		}
+
+		&--download {
+			&::before {
+				background-image: url('../img/icons/download.svg');
+			}
 		}
 	}
 

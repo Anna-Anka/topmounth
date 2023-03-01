@@ -1,12 +1,15 @@
 .top-slider {
 	padding-top: 12px;
 
+	&__swiper {
+		overflow: visible;
+	}
+
 	&__item {
 		position: relative;
 		width: 100%;
 		max-width: 1300px;
-		padding-bottom: 20%;
-		overflow: hidden;
+		padding-bottom: 20.5%;
 
 		@include mq(lg) {
 			padding-bottom: 25%;
@@ -21,5 +24,43 @@
 		@include resize-img;
 		z-index: 2;
 		display: block;
+	}
+
+	&__buttons {
+        position: absolute;
+        top: 50%;
+        left: 48.25%;
+        z-index: 5;
+		display: flex;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1260px;
+        padding: 0 30px;
+        transform: translate(-50%, -50%);
+
+        @include mq(md) {
+            display: none;
+        }
+	}
+
+	.swiper-pagination {
+		bottom: -35px;
+	}
+
+	.swiper-pagination-bullet {
+		width: 12px;
+		height: 12px;
+		background: $grey-500;
+		opacity: 1;
+        transition: background-color 0.4s, border-color 0.4s;
+
+        &:hover {
+            background: transparent;
+            border-color: $orange-500; 
+        }
+	}
+
+	.swiper-pagination-bullet-active {
+		background: $orange-500;
 	}
 }

@@ -1,0 +1,30 @@
+.posts-vk {
+	background-color: $grey-400;
+
+	.product-card__link {
+		color: $dark-600;
+		font-size: 16px;
+		line-height: 1.4;
+		text-transform: none;
+	}
+
+	.product-card__image {
+		border: 0;
+
+		&:focus {
+			box-shadow: 0 0 0 1px $orange-500;
+		}
+
+		&:active {
+			.product-card__img {
+				transform: scale(1);
+                opacity: 0.8;
+			}
+		}
+	}
+
+	.product-card__img {
+		object-fit: cover;
+        transition: transform 0.4s, opacity 0.4s;
+	}
+}

@@ -112,6 +112,12 @@
 			}
 		}
 
+        &--logout {
+            &::before {
+                background-image: url('../img/icons/logout.svg');
+            }
+        }
+
 		@include mq(md) {
 			width: 100%;
 			max-width: 28px;
